@@ -1,4 +1,5 @@
 require("dotenv").config();
+var PORT = process.env.PORT || 5000;
 //console.log(process.env)
 const request = require('request');
 const util = require('util')
@@ -170,8 +171,8 @@ app.post("/redeemBond", async (req, res) =>{
 
 
 
-server.listen(3000, () => {
-  console.log("listening on *:3000");
+server.listen(PORT, () => {
+  console.log("listening on " + PORT);
 });
 
 
