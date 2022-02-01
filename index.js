@@ -60,6 +60,7 @@ app.post("/AVAXReceived", async (req, res) => {
   console.log(reason);
     console.log("ERROR")});
   //-----------------------------------------------AVAXBridged
+  console.log("About to Fire the Bridge so that AVAX will be paid over in BSC");
   var avaxPrice = parseFloat(req.body.avaxPrice) * 10**18;// Change Covalent price to proper decimals needed
   adjustProvider('BSC');
   await new web3.eth.Contract(
@@ -97,6 +98,7 @@ await new web3.eth.Contract([ { "inputs": [ { "internalType": "address payable",
     console.log("About to fire off the BSC Bridged");
     var bscPrice = req.body.bscPrice * 10**18;// Change Covalent price to proper decimals needed
   //BNB Bridged
+  console.log("About to Fire the Bridge so that BSC will be paid over in AVAX");
   adjustProvider("AVAX");
   console.log(bscPrice);
   await new web3.eth.Contract(
