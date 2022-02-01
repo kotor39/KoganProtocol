@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<link rel="stylesheet" href="/AnuraDice/gameroom.css" />
+<link rel="stylesheet" href="/AnuraDice/GameFiles/style.css" />
+<script src= "/assets/scripts/web3Connect.js" defer></script>
+<script src= "/AnuraDice/GameFiles/diceStart.js" defer></script>
+
+
+<html>
+  <head>
+    <title>Anura Dao Game Room!</title>
+    <style> body { margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }</style>
+  </head>
+  <body>
+    <div class="topBar">
+      <div id="nftSelectedSpace" style ="display:table; margin-left: auto; margin-right: 0;"></div>
+      <div style="height:50px; display:table; margin-left: auto; margin-right: 0;"></div>
+      <P id="roomID" style = "text-align:center;font-size: xx-large;">Welcome to Room : ROOMID</P>
+    </div>
+    </div>
+    <div class = "gameRender">
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">0</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">0</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="/AnuraDice/GameFiles/dice-5.png" alt="Playing dice" class="dice" />
+      <button id = "rollButton" class="btn btn--roll" style="display:none">🎲 Roll dice</button>
+      <button id = "holdButton" class="btn btn--hold" style="display:none">📥 Hold</button>
+      <button id = "betButton" class = "btn btn--bet" style="display:none">💰 Bet Here</button>
+    </div>
+
+
+  </body>
